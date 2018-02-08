@@ -45,7 +45,9 @@ function! BufOnly(buffer, bang)
 	let n = 1
 	while n <= last_buffer
 		if n != buffer && buflisted(n)
-			if a:bang == '' && getbufvar(n, '&modified')
+      if bufname(n) =~ 'term://'
+        echomsg 'Skipped terminal buffer'
+      elseif a:bang == '' && getbufvar(n, '&modified')
 				echohl ErrorMsg
 				echomsg 'No write since last change for buffer'
 							\ n '(add ! to override)'
