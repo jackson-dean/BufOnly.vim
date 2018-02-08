@@ -4,5 +4,5 @@ This is a mirror of http://www.vim.org/scripts/script.php?script_id=1071
 
 :BufOnly with an argument will close all buffers but the supplied buffer name/number.
 
-*Neovim Enhancements:*
-- Will skip open terminal buffers
+### Neovim Enhancements:
+- Skips open terminal buffers
